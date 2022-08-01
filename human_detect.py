@@ -10,8 +10,8 @@ mediapipeDrawingUtils = mediapipe.solutions.drawing_utils #mediapipe draw variab
 #make the conditions 
 while True:
     show,img = readVideo.read()
-    # if not show:
-    #     break
+    if not show:
+        break
     imgRGB = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
     results = poseDetect.process(imgRGB)
 
